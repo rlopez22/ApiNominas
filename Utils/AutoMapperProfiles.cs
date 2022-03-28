@@ -16,6 +16,10 @@ namespace ApiNominas.Utils
             CreateMap<ContractPatchDTO, Contract>().ReverseMap();
             CreateMap<Contract, ContractDTO>();
             CreateMap<Contract, ContractWithCompanyDTO>();
+
+            CreateMap<WorkerCreateDTO, Worker>();
+            CreateMap<Worker, WorkerDTO>();
+            //CreateMap<Worker, WorkerWithContractsDTO>();
         }
     }
 }

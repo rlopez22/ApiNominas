@@ -11,5 +11,6 @@ namespace WebApiNominas
 
         public DbSet<Company> Companies { get; set; }
         public DbSet<Contract> Contracts { get; set; }
+        public DbSet<Worker> Workers { get; set; }
     }
 }
