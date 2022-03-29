@@ -19,7 +19,10 @@ namespace ApiNominas.Utils
 
             CreateMap<WorkerCreateDTO, Worker>();
             CreateMap<Worker, WorkerDTO>();
-            //CreateMap<Worker, WorkerWithContractsDTO>();
+            //CreateMap<Worker, WorkerWithPayrollsDTO>();
+
+            CreateMap<PayrollCreateDTO, Payroll>();
+            CreateMap<Payroll, PayrollDTO>();
         }
     }
 }

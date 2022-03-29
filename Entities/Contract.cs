@@ -8,6 +8,7 @@ namespace ApiNominas.Entities
         
         [Required]
         [Range(0, int.MaxValue)]
+        [DataType(DataType.Currency)]
         public int SBase { get; set; }
 
         [Required]

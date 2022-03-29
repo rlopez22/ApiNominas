@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WebApiNominas;
 
@@ -11,9 +12,11 @@ using WebApiNominas;
 namespace ApiNominas.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220329181621_Payrolls")]
+    partial class Payrolls
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -37,7 +40,7 @@ namespace ApiNominas.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Companies", (string)null);
+                    b.ToTable("Companies");
                 });
 
             modelBuilder.Entity("ApiNominas.Entities.Contract", b =>
@@ -68,7 +71,7 @@ namespace ApiNominas.Migrations
 
                     b.HasIndex("CompanyID");
 
-                    b.ToTable("Contracts", (string)null);
+                    b.ToTable("Contracts");
                 });
 
             modelBuilder.Entity("ApiNominas.Entities.Payroll", b =>
@@ -95,7 +98,7 @@ namespace ApiNominas.Migrations
 
                     b.HasIndex("WorkerId");
 
-                    b.ToTable("Payrolls", (string)null);
+                    b.ToTable("Payrolls");
                 });
 
             modelBuilder.Entity("ApiNominas.Entities.Worker", b =>
@@ -123,7 +126,7 @@ namespace ApiNominas.Migrations
 
                     b.HasIndex("ContractID");
 
-                    b.ToTable("Workers", (string)null);
+                    b.ToTable("Workers");
                 });
 
             modelBuilder.Entity("ApiNominas.Entities.Contract", b =>
